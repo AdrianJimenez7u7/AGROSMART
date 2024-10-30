@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-const CardMenu = ({ title, img, rute}) => {
+const ListMenu = ({ id, rancho , date}) => {
   return (
-    <TouchableOpacity style={styles.card} onPress={() => {navigation.navigate({rute});}}>
-      <Image source={img} style={styles.image} resizeMode="cover" />
-      <Text style={styles.title}>{title}</Text>
+    <TouchableOpacity style={styles.card} onPress={() => {}}>
+      <Text style={styles.title}>{id}</Text>
+      <Text style={styles.title}>{rancho}</Text>
+      <Text style={styles.title}>{date}</Text>
     </TouchableOpacity>
   );
 };
@@ -40,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardMenu;
+export default ListMenu;

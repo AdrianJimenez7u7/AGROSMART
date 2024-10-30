@@ -1,23 +1,19 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import CardMenu from '../../components/CardMenu';
+import ListMenu from '../../components/ListMenu';
 
-function Menu() {
-  navigation.navigate('Menu');
-
-  const modulos = [
-    { modulo: 'Cortes', img: require('../../../assets/corte.jpg'), rute: 'Cortes'},
-    { modulo: 'Asistencia', img: require('../../../assets/asistencia.jpg') ,rute: 'Cortes'},
-    { modulo: 'Inventario', img: require('../../../assets/inventario.jpg'),rute: 'Cortes' },
-    { modulo: 'Ranchos', img: require('../../../assets/rancho.jpg'),rute: 'Cortes' },
+function Cortes() {
+  const cortes = [
+    { FechaHora: '12/10/24', Rancho:"AgricolaTo",Responsable:"Juan Perez",Variedad:"BK13",Sector:"1", Personal:[], KilosTotales:10, kilosAceptados:9, evidencia:""},
   ];
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Menu Principal</Text>
       <ScrollView contentContainerStyle={styles.menuContainer}>
-        {modulos.map((modulo, index) => (
-          <CardMenu key={index} title={modulo.modulo} img={modulo.img} rute={modulo.rute}/>
+        {cortes.map((corte, index) => (
+          <ListMenu key={index} id={index} rancho={modulo.Rancho} date={modulo.FechaHora} />
         ))}
       </ScrollView>
     </View>
@@ -42,4 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Menu;
+export default Cortes;
