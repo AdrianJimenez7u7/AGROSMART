@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 
-const logo = require('../../../assets/Logo.png');
+const logo = require('../../assets/Logo.png');
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const users = [
-    { email: "isc_mjimenez2021@accitesz.com", password: "TECZAM2021" },
-    { email: "isc_jgalvan2021@accitesz.com", password: "TECZAM2021" }
+    { email: "admin@admin.com", password: "admin" },
   ];
 
   const handleLogin = () => {

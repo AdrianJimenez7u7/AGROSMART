@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './src/pages/public/Login';
-import Test from './Test';
-import Menu from './src/pages/public/Menu';
-import Cortes from './src/pages/private/Cortes';
+import Login from './src/screens/Login';
+import Menu from './src/screens/Menu';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,9 +13,7 @@ const MyStack = () => {
         component={Login}
         options={{ title: 'Login' }}
       />
-      <Stack.Screen name="Test" component={Test} />
-      <Stack.Screen name="Menu" component={Menu} />
-      <Stack.Screen name="Cortes" component={Cortes} />
+      <Stack.Screen name="Menu" component={Menu}  />
     </Stack.Navigator>
   );
 };
